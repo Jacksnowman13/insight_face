@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-blur-tool"
+version = "0.1.0"
+description = "High-recall face blurring using InsightFace and OpenCV (CPU/GPU)."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Ben Zhou", email = "bz2883@princeton.edu" }
+]
+
+dependencies = [
+  "insightface",
+  "opencv-python",
+  "numpy",
+
+]
+
+[project.scripts]
+faceblur = "face_blur_tool.cli:main"
